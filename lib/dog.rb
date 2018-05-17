@@ -1,4 +1,5 @@
 class Dog
+  attr_reader :name
   @@all = []
 
   def initialize(name)
@@ -7,9 +8,10 @@ class Dog
     @@all << self
   end
 
-  def name
-    @name
-  end
+  # attr_reader, a macro, acts like a method so we dont neet to explicitly define a name method
+  # def name
+  #   @name
+  # end
 
   def self.clear_all
     @@all = []
